@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World ");
 });
 
 app.get("/about", (req, res) => {
@@ -17,6 +17,10 @@ app.get("/secretdetails", (req, res) => {
     lastname: "Poddar",
     number: 9815379803,
   });
+});
+
+app.get("/contact/:name", (req, res) => {
+  res.send("Contact " + req.params.name);
 });
 
 app.get("/bootstrap", (req, res) => {
