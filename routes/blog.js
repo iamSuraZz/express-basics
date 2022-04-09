@@ -12,7 +12,9 @@ router.get("/blog", (req, res) => {
   //   blogs.forEach((e) => {
   //     console.log(e.title);
   //   });
-  res.render(path.join(__dirname, "../templates/blogHome.html"));
+  res.render("blogHome", {
+    blogs: blogs,
+  });
 });
 
 router.get("/blogpost/:slug", (req, res) => {
